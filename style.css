@@ -1,0 +1,76 @@
+@import url('https://fonts.googleapis.com/css2?family=Space+Mono:ital,wght@0,400;0,700;1,400;1,700&display=swap');
+
+body {
+	font-family: "Space Mono", monospace;
+    background-color: black;
+    overflow: hidden;
+}
+
+#canvas {
+	position: absolute;
+	left: 50%;
+	top: 50%;
+	translate: -50% -50%;
+	width: 100vmin;
+	height: 100vmin;
+	filter: sepia();
+    z-index: -1;
+    transition: scale 2s;
+    scale: 0;
+}
+
+#content {
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	translate: -50% -50%;
+	z-index: 0;
+	color: rgb(250, 235, 148);
+	filter: drop-shadow(0 0 10px white) sepia();
+	border: dashed;
+	padding: 10px;
+	max-width: 50vmin;
+    scale: 0;
+    transition: scale 2s, color 2s, background-color 2s;
+}
+
+#left, #right {
+	position: absolute;
+	top: 0;
+	width: 50vw;
+	height: 100vh;
+	opacity: 0;
+	z-index: 1;
+}
+#left {
+	left: 0;
+}
+#right {
+	right:0;
+}
+
+#go {
+    font-family: inherit;
+    border: solid;
+    border-color: white;
+    background-color: white;
+    padding: 10px;
+    margin: 10px;
+    position: absolute;
+    left: 50%;
+    top: -20%;
+    translate: -50% 0;
+    z-index: 10;
+    transition: 0.2s;
+    filter: drop-shadow(0 0 20px white) sepia();
+    scale: 1;
+}
+#go:hover {
+    background-color: black;
+    color: white;
+}
+
+img {
+	max-width: 100%;
+	max-height: 100%;
+}
